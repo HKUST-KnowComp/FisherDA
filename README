@@ -1,6 +1,6 @@
 # Fisher Deep Domain Adaptation
 
-This repository contains the code of our SDM20 paper "Fisher Deep Domain Adapation". 
+This repository contains the code of our SDM20 paper "Fisher Deep Domain Adaptation". 
 
 ## Usage
 ### Dependencies
@@ -37,9 +37,9 @@ python train_feature.py --gpu_id <gpu_id> \
                         --trade_off 1.
 ```
 
-The weight of the transfer criteria is controled by the `trade_off` argument. If you do not want to use a transfer criteria, please set the `trade_off` argument to 0. 
+The weight of the transfer criteria is controlled by the `trade_off` argument. If you do not want to use a transfer criteria, please set the `trade_off` argument to 0. 
 
-The Fisher loss has two instantiations, Trace Ratio and Trace Difference. The instantiation is determined by the `fisher_loss_type` argument. The within-class and between-class penalty is controled by the `intra_loss_coef` and `inter_loss_coef`, respectively. 
+The Fisher loss has two instantiations, Trace Ratio and Trace Difference. The instantiation is determined by the `fisher_loss_type` argument. The within-class and between-class penalty are controlled by the `intra_loss_coef` and `inter_loss_coef`, respectively. 
 
 ### Evaluation
 To evaluate the model, the following command can be used. 
@@ -55,7 +55,7 @@ python eval_da.py --gpu_id <gpu_id> \
 ```
 
 ## Citation
-If you use this code, please consider cite our paper: 
+If you use this code, please consider citing our paper: 
 
 ```
 Yinghua Zhang, Yu Zhang, Ying Wei, Kun Bai, Yangqiu Song, Qiang Yang. Fisher Deep Domain Adaptation. In: Proceedings of SIAM International Conference on Data Mining (SDM), Cincinnati, Ohio, USA, 2020. 
