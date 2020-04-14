@@ -192,12 +192,6 @@ def test(config):
     # save train/test accuracy as pkl file
     with open(os.path.join(config["output_path"], 'accuracy.pkl'), 'wb') as pkl_file:
         pkl.dump({'train': train_accuracy, 'test': test_acc}, pkl_file)
-
-    # top k confusion classes for each class
-    base_data_path = os.path.split(data_config["target"]["list_path"])[0]
-    with open(os.path.join(base_data_path, 'label2class.json'), "r") as f:
-        obj = json.load(f)[0]
-        label_to_class = {int(k):v for k, v in obj.items()} #convert key to int
     
     np.set_printoptions(precision=2)
     log_str = "train precision: {:.5f}\ttest precision: {:.5f}\nconfusion matrix:\n{}\n".format(
